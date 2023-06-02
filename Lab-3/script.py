@@ -2,9 +2,8 @@
 import numpy as np
 import time
 from math import exp, sqrt, log, gcd, e
-import random
 # Use factorization from Lab 1
-from factor_module import general_factor, check_prime
+from factor_module import check_prime
 
 
 # ## Генеруємо факторну базу
@@ -225,7 +224,7 @@ def solve(alpha, beta, n):
 
 
 import os
-clear = lambda: os.system('cls')
+clear = lambda: os.system('clear')
 clear()
 
 if __name__ == "__main__":
