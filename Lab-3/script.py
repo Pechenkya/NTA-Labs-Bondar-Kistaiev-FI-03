@@ -67,7 +67,7 @@ def gen_equations(a, n, S, number_of_eq=0):
 
 
 from multiprocessing import Process, Manager
-Subprocesses = 2
+Subprocesses = 4
 
 def equation_subprocess(a, n, S, start_power, A_shared, b_shared, number_of_eq):
     print("Started subprocess")
@@ -122,7 +122,6 @@ def solve_modular_eq(A_in, b, mod):
 
     chosen = []
 
-    additional_shift = {}
     # Gauss elimination
     for j in range(m):
         found = False
@@ -160,7 +159,7 @@ def solve_modular_eq(A_in, b, mod):
                             A[k] = (A[k] - A[k][j]*A[i]) % mod
                     break
 
-    print(A)
+    # print(A)
     solution = []
     for j in range(m):
         added = False
@@ -225,7 +224,7 @@ def solve(alpha, beta, n):
 
 import os
 clear = lambda: os.system('clear')
-clear()
+
 
 if __name__ == "__main__":
     
@@ -242,7 +241,8 @@ Select method: '''))
 
         if o != '0' and o != '1':
             continue
-
+        
+        print("----------------------------------")
         print("Enter parameters: ")
         a = int(input("a = "))
         b = int(input("b = "))
@@ -257,6 +257,7 @@ Select method: '''))
 
         print(f"General execution time: {et - st} seconds\n")
         print(f"Solution: {res}")
+        print("----------------------------------")
         input("Press enter to continue")
 
 
