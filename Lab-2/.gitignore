@@ -1,4 +1,5 @@
 __pycache__
 Dockerfile
-.zip
-.txt
+*.zip
+*.txt
+*.pdf
