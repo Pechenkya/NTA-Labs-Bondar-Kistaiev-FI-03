@@ -1,6 +1,6 @@
 # %%
 import math
-
+import time
 from factor_module import check_prime
 
 # %%
@@ -79,15 +79,6 @@ def SPH(a, b, p):
     
     return CRT(Y, P)
 
-a = 123224229494
-p = 339977974123
-b = 82766290185
-print(Factor(p-1))
-x = SPH(a, b, p)
-print(x)
-
-print(pow(a, x, p) == b)
-
 # %%
 def BruteDL(a, b, p):
     ax = 1
@@ -100,6 +91,27 @@ def BruteDL(a, b, p):
 
     return float('nan')
 
-print(BruteDL(213457239934409, 256217129498278, 658117300202657))
+import os
+clear = lambda: os.system('clear')
+
+if __name__ == "__main__":
+    
+    while True:
+        clear()
+        
+        print("----------------------------------")
+        print("Enter parameters: ")
+        a = int(input("a = "))
+        b = int(input("b = "))
+        p = int(input("p = "))
+
+        st = time.time()
+        x = SPH(a, b, p)
+        et = time.time()
+
+        print(f"General execution time: {et - st} seconds\n")
+        print(f"Solution: {x}")
+        print("----------------------------------")
+        input("Press enter to continue")
 
 
