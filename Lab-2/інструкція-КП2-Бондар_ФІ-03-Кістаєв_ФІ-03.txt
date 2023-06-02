@@ -1,0 +1,13 @@
+0. Посилання на DockerHub:
+https://hub.docker.com/r/petrob2003/nta_lab-2_bondar_kistaiev
+
+Послідовність дій:
+1. Завантажити docker image:
+docker pull petrob2003/nta_lab-2_bondar_kistaiev
+
+2. Запустити програму в такому форматі:
+docker run -it petrob2003/nta_lab-2_bondar_kistaiev
+
+3. Після появи відповідного поля - ввести по черзі числа a (основа), b (значення), n (модуль)
+
+4. Після обчислення натистнути "Enter", щоб перейти до введення нових значень.
